@@ -44,6 +44,7 @@ class InstallCatalogSampleData implements DataPatchInterface, PatchVersionInterf
      */
     public function apply()
     {
+        file_put_contents(BP."/var/log/lkg.txt", "InstallCatalogSampleData: apply".PHP_EOL, FILE_APPEND);
         $this->executor->exec($this->installer);
     }
 
